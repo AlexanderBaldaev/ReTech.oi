@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ReTech</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+<header class="header">
+    <div class="header-container">
+      <!-- Логотип -->
+      <div class="logo">
+        <h1>ReTech</h1>
+        <p>магазин по продаже техники</p>
+      </div>
+
+      <!-- Меню -->
+      <nav class="nav">
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="name.html">О нас</a>
+        <a href="contacts.html">Контакты</a>
+      </nav>
+
+      <div class="icons">
+        <div class="search-bar">
+          <input type="text" placeholder="Поиск" class="search-input" />
+          <button class="search-button">
+            <img
+              src="https://img.icons8.com/ios-glyphs/20/search--v1.png"
+              alt="Поиск"
+            />
+          </button>
+        </div>
+
+        <!-- Вход и Корзина -->
+        <div class="login-cart">
+          <div class="login">
+            <button class="icon-button" onclick="openLoginPopup()">
+              <img
+                src="https://img.icons8.com/ios-glyphs/30/user--v1.png"
+                alt="Войти"
+              />
+            </button>
+          </div>
+          <div class="cart">
+            <button class="icon-button">
+              <img
+                src="https://img.icons8.com/ios-glyphs/30/shopping-cart.png"
+                alt="Корзина"
+              />
+            </button>
+          </div>
+        </div>
+        <!-- Попап для ввода данных -->
+  <div id="login-popup" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closeLoginPopup()">&times;</span>
+      <h2>Войти / Зарегистрироваться</h2>
+      <form id="login-form">
+        <div class="form-group">
+          <label for="username">Логин:</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            required
+            placeholder="Введите логин"
+          />
+        </div>
+        <div class="form-group">
+          <label for="password">Пароль:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            required
+            placeholder="Введите пароль"
+          />
+        </div>
+        <button type="submit" class="submit-button">Войти</button>
+        <div class="separator">
+          <hr />
+          <span>Или</span>
+        </div>
+        <button type="button" class="google-button">
+          <img
+            src="https://img.icons8.com/color/24/google-logo.png"
+            alt="Google"
+            class="google-icon"
+          />
+          Войти через Google
+        </button>
+        <div class="register-link">
+          <p>
+            Нет аккаунта?
+            <a href="#" onclick="toggleForm('register')"
+              >Зарегистрироваться</a
+            >
+          </p>
+        </div>
+      </form>
+      <form id="register-form" style="display: none">
+        <div class="form-group">
+          <label for="reg-username">Логин:</label>
+          <input
+            type="text"
+            id="reg-username"
+            name="reg-username"
+            required
+            placeholder="Введите логин"
+          />
+        </div>
+        <div class="form-group">
+          <label for="reg-email">Email:</label>
+          <input
+            type="email"
+            id="reg-email"
+            name="reg-email"
+            required
+            placeholder="Введите email"
+          />
+        </div>
+        <div class="form-group">
+          <label for="reg-password">Пароль:</label>
+          <input
+            type="password"
+            id="reg-password"
+            name="reg-password"
+            required
+            placeholder="Введите пароль"
+          />
+        </div>
+        <button type="submit" class="submit-button">
+          Зарегистрироваться
+        </button>
+        <div class="separator">
+          <hr />
+          <span>Или</span>
+        </div>
+        <button type="button" class="google-button">
+          <img
+            src="https://img.icons8.com/color/24/google-logo.png"
+            alt="Google"
+            class="google-icon"
+          />
+          Зарегистрироваться через Google
+        </button>
+        <div class="register-link">
+          <p>
+            Уже есть аккаунт?
+            <a href="#" onclick="toggleForm('login')">Войти</a>
+          </p>
+        </div>
+      </form>
+    </div>
+  </div>
+</header>
+
+<div class="product-page">
+<div class="product-grid">
+    <!-- Изображение товара -->
+    <div class="product-image-4">
+        <img src="img/13 491.png" alt="Стиральная машинка">
+    </div>
+
+    <!-- Информация о товаре -->
+    <div class="product-info">
+        <h1>Стиральная машина Dexp-JL</h1>
+        <p class="price">Цена: <strong>19400 ₽</strong></p>
+        <button class="buy-button">Купить</button>
+    </div>
+
+    <!-- Продавец -->
+    <div class="seller-info">
+        <p><strong>Дарья В.</strong> ⭐⭐⭐⭐</p>
+        <p>Частное лицо</p>
+        <p>Астрахань</p>
+        <button>2 объявлений</button>
+        <button>Подписаться на продавца</button>
+    </div>
+
+    <!-- Характеристики -->
+    <div class="product-specs">
+        <h2>Основные характеристики</h2>
+        <ul>
+            <li>Гарантия продавца. 1 мес.</li>
+            <li>Загрузка белья для стирки и отжима: 8,5 кг</li>
+            <li>Диаметр загрузочного люка. 35 см</li>
+            <li>Выбор скорости отжима: есть</li>
+            <li>Язык панели управления: русский</li>
+            <li>Расход воды за стирку: 45 л</li>
+            <li>Прямой привод: есть</li>
+            <li>Угол открывания люка (градус) 150°</li>
+        </ul>
+    </div>
+</div>
+</div>
+<footer class="footer">
+<div class="container">
+  <div class="footer-logo">
+    <h2 class="logo-main">ReTech</h2>
+    <p class="logo-sub">магазин по продаже техники</p>
+</div>
+    <div class="row">
+        <div class="col-md-4">
+            <h5>Клиентам</h5>
+            <ul class="list-unstyled">
+                <li><a href="name.html">Trade-in</a></li>
+                <li><a href="#">Обмен, Возврат и ремонт</a></li>
+                <li><a href="#">Доставка и оплата</a></li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <h5>Ссылки</h5>
+            <ul class="list-unstyled">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="name.html">Католог</a></li>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <h5>Свяжитесь с нами</h5>
+            <p>Email: Alexanderbaldaev7@gmail.com</p>
+            <p>Телефон: +7 996 259-50-89</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2023-2024 ReTech.</p>
+    </div>
+</div>
+</footer>
